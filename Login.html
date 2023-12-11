@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <div class="login">
+        <img src="images/login3.avif" alt="login" class="img">
+        <form action="" class="form">
+            <h1 class="h1">Login Here</h1>
+            <div class="loginInput">
+                <div class="loginBox">
+                    <input type="text" placeholder="UserName" required class="input">
+                    
+                    
+
+
+                </div>
+                <div class="loginBox">
+                  <input type="password" placeholder="Password" required class="input">
+                  <i class="ri-lock-2-fill"></i>
+
+
+                </div>
+            </div>
+            <div class="check">
+                <div class="checklogin">
+                    <input type="checkbox" class="checkinput" id="user">
+                    <label for="user" class="label">Remember me</label>
+
+                </div>
+                <a href="#" class="forgot">forgot Password?</a>
+            </div>
+            <!-- <button type="submit" class="button" >Login</button> -->
+            
+                <button type="submit" class="button" onclick="openPopup()">Login</button>
+                <div class="popup" id="popup">
+                   <img src="images/yes.jpeg"> 
+                   <h2>Thank You</h2>
+                   <p>your details are credential!!</p>
+                   <button type="button" onclick="closePopup()">Ok</button>
+                
+            </div>
+            <script>
+              let popup = document.getElementById("popup");
+              function openPopup(){
+                popup.classList.add("open-popup");
+              } 
+              function closePopup(){
+                popup.classList.remove("open-popup");
+              } 
+            </script>
+            <div class="register">
+                Don't have an account?<a href="#">Register</a>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

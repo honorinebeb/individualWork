@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="port.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li class=""><a href="#">Home</a></li>
+                    <li class=""><a href="#">About</a></li>  
+                    <li class=""><a href="#">portfolio</a></li>
+                    <li class=""><a href="#">Contact</a></li>
+                </ul>
+
+            </nav>
+            <div class="head-title">
+                <p>UI/UX Designer</p>
+                <h1><small>Hi, I'm <span>Honorine</span><br>G From Rwandan </small></h1>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="colspan1">
+                    <img src="images/hono.jpg">
+                    </div>
+                    <div class="colspan2">
+                        <h1 class="me">About Me</h1>
+                        <p>I'am Honorine g from rwandan ,and am student from kalongi and am in year three in Ict Department Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Enim facere ratione placeat. Nemo facilis soluta quia consequatur qui quisquam, 
+                        ad cum repellendus quo ab repellat ullam. Tempora consequuntur iure commodi.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam quis et, expedita debitis quasi nisi esse 
+                        deserunt ipsum non labore neque totam vero fugiat suscipit maiores 
+                        uptates vitae officia nobis.</p>
+                        <div class="tab">
+                            <p class="skill active" onclick="opentab('Skills')">Skills</p>
+                            <p class="skill"  onclick="opentab('experience')">Experience</p>
+                            <p class="skill"  onclick="opentab('education')">Education</p>
+                        </div>
+                        
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing web/App interfaces </li>
+                                <li><span>Back-End Development</span><br>Designing Back-End Development </li>
+                                <li><span>Front-End Development</span><br>Designing Front-End Development </li>
+                                <li><span>Java script</span><br>Designing web using java script</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021 -Current</span><br>UI/UX Designing web/App interfaces </li>
+                                <li><span>2019 - 2021</span><br>Team lead at kicukiro view startup </li>
+                                <li><span>2017 - 2019</span><br>UI/UX design Excel Digital ltd </li>
+                                <li><span>2016 - 2017</span><br>Enternship and training in Cyber security </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2016</span><br>UI/UX training at kimihurura BBC </li>
+                                <li><span>2017</span><br>BBM international skills </li>
+                                <li><span>2018</span><br>NBA from kicukiro </li>
+                                <li><span>2019</span><br>study in APEKI TUMBA Tvet school from s4-s6 </li>
+                                <li><span>2018</span><br>I continued UNIVERSITY AT karongi district </li>
+                                
+                            </ul>
+                        </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var tabs = document.getElementsByClassName("tab");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tabse of tabs){
+                tabse.classList.remove("active");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active");
+
+        }
+
+    </script>
+</body>
+</html>
