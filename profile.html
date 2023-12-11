@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="prof.css">
+</head>
+<body>
+   <div class="user details" id="userBox">
+   <img src="images/hono2.jpg" onclick="openinfo()">
+   <div class="info">
+    <h1>Honorine Gakuru</h1>
+    <p>Student Of <span>IPRC Karongi Inc. </span> </p>
+    <p>From: Rwanda,Kigali City</p>
+    <a href="#">Connect With Me</a>
+   </div>
+<div class="close" onclick="closeinfo()">
+
+</div>
+   </div> 
+
+<script>
+let userBox = document.getElementById("userBox");
+function openinfo(){
+    userBox.classList.remove("details");
+}
+function closeinfo(){
+    userBox.classList.add("details");
+}
+</script>
+</body>
+</html>

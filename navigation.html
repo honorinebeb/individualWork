@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="drop.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="main">
+                <div class="logo">
+                    <a href="#">Logo</a>
+
+                </div>
+                <div class="open">
+                    <span>
+
+                    </span>
+
+                </div>
+                <div class="menuOverlay">
+
+                </div>
+                <nav class="nav">
+                    <div class="close">
+                        <img src="images/close2.png" alt="close">
+                    </div>
+                    <ul class="menu">
+                        <li class="menuItem menu-children">
+                            <a href="#" data-toggle="submenu">Home<i class="plus"></i></a>
+                            <ul class="submenu">
+                                <li class="menuItem"><a href="profile.html">Profile Card</a></li>
+                                <li class="menuItem"><a href="portfolio.html">Personal portfolio</a></li>
+                                <li class="menuItem"><a href="weather.html">Weather App</a></li>
+                                <li class="menuItem"><a href="slider.html">testimonial slider</a></li>
+                            </ul>
+                        
+                        <li class="menuItem"><a href="contact.html">Contact</a></li>
+                        <li class="menuItem"><a href="profile.html">Profile Card</a></li>
+                        <li class="menuItem"><a href="portfolio.html">Personal portfolio</a></li>
+                        <li class="menuItem"><a href="weather.html">Weather App</a></li>
+                        <li class="menuItem"><a href="slider.html">testimonial slider</a></li>
+                        <li class="menuItem"><a href="Login.html">Login</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="home">
+
+
+    </section>
+<script>
+    (() =>{
+        let openNav = document.querySelector(".open"),
+        closeNav = document.querySelector(".close"),
+        navMenu = document.querySelector(".nav"),
+        menuOver = document.querySelector(".menuOverlay"),
+        mediaSize = 991;
+    
+        openNav.addEventListener("click", toggleNav);
+        closeNav.addEventListener("click", toggleNav);
+        menuOver.addEventListener("click", toggleNav);
+    
+        function toggleNav() {
+            navMenu.classList.toggle("open");
+            menuOver.classList.toggle("active")
+            document.body.classList.toggle("hidden-scrolling");
+        }
+        navMenu.addEventListener("click", (event) =>{
+            if(event.target.hasAttribute("data-toggle") && window.innerWidth <= mediaSize){
+                const menuItemHasChildren = event.target.parentElement;
+                if(nav.querySelector(".menu-children.active")){
+                    collapseSubMenu();
+
+                }
+                
+                menuItemHasChildren.classList.add("active");
+                const sub_menu = menuItemHasChildren.querySelector(".submenu");
+                sub_menu.style.maxHeight = sub_menu.scrollHeight + "px";
+            
+            }
+    
+        });
+        function collapseSubMenu(){
+            nav.querySelector(".menu-children.active.active .submenu")
+            .removeAttribute("style");
+            nav.querySelector(".menu-children.active.active")
+            .classList.remove("active");
+        }
+    })();
+</script>
+</body>
+
+</html>
