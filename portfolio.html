@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
     <link rel="stylesheet" href="port.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
+
 <body>
-    
-    <div class="header">
+
+    <div id="header">
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
-                <ul>
-                    <li class=""><a href="#">Home</a></li>
-                    <li class=""><a href="#">About</a></li>  
-                    <li class=""><a href="#">portfolio</a></li>
-                    <li class=""><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li class=""><a href="#header">Home</a></li>
+                    <li class=""><a href="#about">About</a></li>
+                    <li class=""><a href="#services">services</a></li>
+                    <li class=""><a href="#portfolio">portfolio</a></li>
+                    <li class=""><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
 
             </nav>
             <div class="head-title">
@@ -28,73 +35,242 @@
         </div>
     </div>
 
-    <div class="about">
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="colspan1">
                     <img src="images/hono.jpg">
+                </div>
+                <div class="colspan2">
+                    <h1 class="me">About Me</h1>
+                    <p>Hello! I'm Honorine G from Rwanda, currently pursuing my studies in the ICT Department at Kalongi. I'm in my third year and have a passion for creating seamless and visually appealing user interfaces and experiences.</p>
+
+    <p>My journey in the world of technology has been both exciting and rewarding. I believe in the power of design to simplify complex ideas and enhance user interactions. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim facere ratione placeat.</p>
+
+    <p>Throughout my career, I have gained expertise in UI/UX design, back-end development, front-end development, and JavaScript. I thrive on turning innovative ideas into practical, user-friendly solutions.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="colspan2">
-                        <h1 class="me">About Me</h1>
-                        <p>I'am Honorine g from rwandan ,and am student from kalongi and am in year three in Ict Department Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Enim facere ratione placeat. Nemo facilis soluta quia consequatur qui quisquam, 
-                        ad cum repellendus quo ab repellat ullam. Tempora consequuntur iure commodi.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam quis et, expedita debitis quasi nisi esse 
-                        deserunt ipsum non labore neque totam vero fugiat suscipit maiores 
-                        uptates vitae officia nobis.</p>
-                        <div class="tab">
-                            <p class="skill active" onclick="opentab('Skills')">Skills</p>
-                            <p class="skill"  onclick="opentab('experience')">Experience</p>
-                            <p class="skill"  onclick="opentab('education')">Education</p>
-                        </div>
-                        
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>UI/UX</span><br>Designing web/App interfaces </li>
-                                <li><span>Back-End Development</span><br>Designing Back-End Development </li>
-                                <li><span>Front-End Development</span><br>Designing Front-End Development </li>
-                                <li><span>Java script</span><br>Designing web using java script</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>2021 -Current</span><br>UI/UX Designing web/App interfaces </li>
-                                <li><span>2019 - 2021</span><br>Team lead at kicukiro view startup </li>
-                                <li><span>2017 - 2019</span><br>UI/UX design Excel Digital ltd </li>
-                                <li><span>2016 - 2017</span><br>Enternship and training in Cyber security </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2016</span><br>UI/UX training at kimihurura BBC </li>
-                                <li><span>2017</span><br>BBM international skills </li>
-                                <li><span>2018</span><br>NBA from kicukiro </li>
-                                <li><span>2019</span><br>study in APEKI TUMBA Tvet school from s4-s6 </li>
-                                <li><span>2018</span><br>I continued UNIVERSITY AT karongi district </li>
-                                
-                            </ul>
-                        </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing web/App interfaces </li>
+                            <li><span>Back-End Development</span><br>Designing Back-End Development </li>
+                            <li><span>Front-End Development</span><br>Designing Front-End Development </li>
+                            <li><span>Java script</span><br>Designing web using java script</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 -Current</span><br>UI/UX Designing web/App interfaces </li>
+                            <li><span>2019 - 2021</span><br>Team lead at kicukiro view startup </li>
+                            <li><span>2017 - 2019</span><br>UI/UX design Excel Digital ltd </li>
+                            <li><span>2016 - 2017</span><br>Enternship and training in Cyber security </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>UI/UX training at kimihurura BBC </li>
+                            <li><span>2017</span><br>BBM international skills </li>
+                            <li><span>2018</span><br>NBA from kicukiro </li>
+                            <li><span>2019</span><br>study in APEKI TUMBA Tvet school from s4-s6 </li>
+                            <li><span>2018</span><br>I continued UNIVERSITY AT karongi district </li>
+
+                        </ul>
+                    </div>
                 </div>
 
             </div>
 
         </div>
     </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="me">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Web design refers to the design of websites. It usually refers to the user experience aspects of
+                        website development rather than software development. Web design used to be focused on designing
+                        websites
+                        for desktop browsers; design for mobile and tablet
+                        browsers has become ever-increasingly important.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>In today’s digital landscape, a strong brand identity is crucial for businesses to stand out from
+                        the competition.
+                        One of the key elements that contribute to building brand identity and trust is UI designing.
+                        User Interface (UI) designing plays a significant role in how users perceive and interact
+                        with a brand’s digital presence. From websites to mobile apps,
+                        e.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>Adobe Photoshop</h2>
+                    <p>Photoshop functionality can be extended by add-on programs called Photoshop plugins (or
+                        plug-ins). Adobe creates some, such as Adobe Camera Raw, but most are developed by
+                        third-parties. Some are free and some are commercial software. Most plugins work with only
+                        Photoshop or Photoshop-compatible
+                        hosts, but a few can also be run as standalone applications.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="me">My Work</h1>
+            <div class="work-list">
+                <div class="Work">
+                    <img src="images/social.webp">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+
+                    </div>
+
+                </div>
+                <div class="Work">
+                    <img src="images/shop.webp">
+                    <div class="layer">
+                        <h3>Photoshop</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+
+                    </div>
+
+                </div>
+                <div class="Work">
+                    <img src="images/online.avif">
+                    <div class="layer">
+                        <h3>Online Shopping</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+
+                    </div>
+
+                </div>
+                <div class="Work">
+                    <img src="images/music.webp">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you to the talented people around the world.
+                            Download it from play store.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <a href="#" class="button">See more</a>
+
+        </div>
+
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="me">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>Honorine@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+250783309759</p>
+                    <div class="social-icon">
+                        <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/HONORINE_CV.pdf" download class="button btn">Download Cv</a>
+
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="your Name" required>
+                        <input type="email" name="email" placeholder="your Email " required>
+                        <textarea name="Message" rows="6" placeholder="your Message"></textarea>
+                        <button type="submit" class="button btn">Send</button>
+                    </form>
+                    <span id="msg"> 
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Honorine.Made with <i class="fas fa-heart"></i> All rights reserved. </p>
+
+        </div>
+    </div>
+
     <script>
-        var tabs = document.getElementsByClassName("tab");
+        var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tabse of tabs){
-                tabse.classList.remove("active");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
             }
-            for(tabcontent of tabcontents){
+            for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
-            event.currentTarget.classList.add("active");
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
 
         }
 
     </script>
+
+    <script>
+        var sidemen = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemen.style.right = "0";
+        }
+         
+        function closemenu(){
+            sidemen.style.right = "-200px";
+        }
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyu3fSoRNv9hCPeUIbhGNWzXH655AuSDsfO-aZLz9zRVB8WA6NP2uvGabFBLaN4CUpw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
+
 </html>
